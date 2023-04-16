@@ -1,0 +1,249 @@
+/* Mise en place des polices et des couleurs */
+
+$background-color: #FFFCF6;
+$text-couleur : #333957;
+$text-secondaire : #E9AC41;
+$text-tertiaire : #9060A0;
+$background-variant : #F0EADF;
+
+@mixin font_principale {
+    font-family: 'CoconPro';
+    font-weight: 300;
+}
+
+@mixin font_secondaire {
+    font-family: 'Caveat';
+    font-weight: 300;
+}
+
+@mixin paragraphe {
+    @include font_principale;
+    font-size: 17px;
+    line-height: 30px;
+}
+
+@mixin titre_principal {
+    font-family: 'Caveat';
+    font-weight: 300;
+    font-size: 50px;
+    color: #333957;
+    text-align: center;
+}
+
+h1 {
+    @include titre_principal;
+}
+
+p {
+    @include paragraphe;
+}
+
+h2 {
+    color: $text-couleur;
+    @include font_principale;
+    font-size: 26px;
+}
+
+h3 {
+    color: $text-tertiaire;
+    @include font_principale;
+    line-height: 30px;
+    margin-bottom: 40px;
+}
+
+span {
+    color: $text-secondaire;
+    @include font_secondaire;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Paramètres temps animation*/
+
+$tempsanimation : 9s;
+$tempspar4: $tempsanimation/4;
+
+/*Paramètres de toute la page*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $background-color;
+    margin: 20px auto;
+    color: $text-couleur;
+    @include font_principale();
+    /*width: 80%;*/
+}
+
+.bouton {
+    background: linear-gradient(90deg, rgba(255, 227, 175, 1) 0%, rgba(251, 246, 238, 1) 26%, rgba(255, 229, 226, 1) 63%, rgba(238, 218, 242, 1) 100%);
+    padding: 15px;
+    border-radius: 80px;
+    color: $text-couleur;
+    text-decoration: none;
+}
+
+/*Paramètres header*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 110px;
+
+    img {
+        width: 70%;
+    }
+
+    #menu {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        margin: 40px;
+        @include font_principale();
+        font-size: 20px;
+    }
+}
+
+/*body {
+    background-image: url(img/Fond_bulles.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}*/
+
+/*div:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    /* push it to the background
+    top: 12px;
+    /* position it off the top background
+    right: 0;
+    bottom: 12px;
+    /* position it off the bottom background
+    left: 0;
+}*/
+
+main {
+    #intro {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 50px;
+        height: calc(100vh - 110px);
+
+        img {
+            width: 90%;
+        }
+
+        .container_margin {
+            margin: 80% auto;
+        }
+    }
+}
+
+.mots_vertical {
+    display: inline;
+    text-indent: 8px;
+
+    span {
+        animation: topToBottom $tempsanimation linear infinite 0s;
+        -ms-animation: topToBottom $tempsanimation linear infinite 0s;
+        -webkit-animation: topToBottom $tempsanimation linear infinite 0s;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    span:nth-child(2) {
+        animation-delay: $tempspar4;
+        -ms-animation-delay: $tempspar4;
+        -webkit-animation-delay: $tempspar4;
+    }
+
+    span:nth-child(3) {
+        animation-delay: $tempspar4 *2;
+        -ms-animation-delay: $tempspar4 *2;
+        -webkit-animation-delay: $tempspar4 *2;
+    }
+
+    span:nth-child(4) {
+        animation-delay: $tempspar4 *3;
+        -ms-animation-delay: $tempspar4 *3;
+        -webkit-animation-delay: $tempspar4 *3;
+    }
+}
+
+@keyframes topToBottom {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 0;
+        -webkit-transform: translateY(30px);
+    }
+
+    10% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+    }
+
+    25% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+    }
+
+    30% {
+        opacity: 0;
+        -webkit-transform: translateY(-29px);
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#presentation {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    img {
+        width: 270px;
+    }
+}
+
+#cards {
+    display: flex;
+    justify-content: space-between;
+
+    .card {
+        background-color: $background-variant ;
+        border-radius: 30px;
+        width: 400px;
+        height: 450px;
+        border-bottom: solid 25px #9060A0;
+    }
+
+
+    .titre {
+        text-align: center;
+    }
+}
+
+#bouton_projet {
+    margin-top: 30px;
+}
