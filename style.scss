@@ -73,10 +73,10 @@ html {
 
 body {
     background-color: $background-color;
-    margin: 20px auto;
     color: $text-couleur;
     @include font_principale();
-    /*width: 80%;*/
+    margin: 0;
+
 }
 
 .bouton {
@@ -87,13 +87,18 @@ body {
     text-decoration: none;
 }
 
+.container_padding {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
 /*Paramètres header*/
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 110px;
+    height: 120px;
 
     img {
         width: 70%;
@@ -113,39 +118,23 @@ header {
     }
 }
 
-/*body {
+#header_intro {
     background-image: url(img/Fond_bulles.svg);
     background-repeat: no-repeat;
-    background-size: contain;
-}*/
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 
-/*div:before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    /* push it to the background
-    top: 12px;
-    /* position it off the top background
-    right: 0;
-    bottom: 12px;
-    /* position it off the bottom background
-    left: 0;
-}*/
-
-main {
     #intro {
         display: flex;
         align-items: center;
         justify-content: space-around;
         gap: 50px;
-        height: calc(100vh - 110px);
+        flex-grow: 1;
 
         img {
             width: 90%;
-        }
-
-        .container_margin {
-            margin: 80% auto;
         }
     }
 }
@@ -233,14 +222,17 @@ main {
     .card {
         background-color: $background-variant ;
         border-radius: 30px;
-        width: 400px;
-        height: 450px;
         border-bottom: solid 25px #9060A0;
     }
 
-
     .titre {
         text-align: center;
+    }
+
+    .mockup {
+        position: relative;
+        top: 0;
+        left: 0;
     }
 }
 
