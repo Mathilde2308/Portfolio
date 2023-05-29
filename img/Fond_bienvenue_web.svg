@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="926" viewBox="0 0 1920 926">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_579" data-name="Rectangle 579" width="1920" height="926" transform="translate(0 1026)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f0eadf"/>
+      <stop offset="0.739" stop-color="#faf6ee" stop-opacity="0.71"/>
+      <stop offset="0.97" stop-color="#fefbf5" stop-opacity="0.988"/>
+      <stop offset="1" stop-color="#fffcf6"/>
+    </linearGradient>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_568" data-name="Rectangle 568" width="2299.066" height="127.645" fill="#fffcf6"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <rect id="Rectangle_568-2" data-name="Rectangle 568" width="2252.301" height="127.645" fill="#fffcf6"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_de_masques_2" data-name="Groupe de masques 2" transform="translate(0 -1026)" clip-path="url(#clip-path)">
+    <g id="Fond_bienvenue" data-name="Fond bienvenue" transform="translate(-49.618 -52)">
+      <rect id="Rectangle_567" data-name="Rectangle 567" width="955.514" height="1920" transform="translate(0 2035.514) rotate(-90)" fill="url(#linear-gradient)"/>
+      <g id="Vague" transform="translate(-379.066 1925.221)">
+        <g id="Groupe_751" data-name="Groupe 751" transform="translate(0 0)" clip-path="url(#clip-path-2)">
+          <path id="Tracé_27635" data-name="Tracé 27635" d="M0,33.307C37.463,21.481,95.858,6.691,173.3,1.656,375.034-11.458,458.59,57.713,683.537,56.92c170.746-.6,176.517-40.646,378.561-42.2,173.32-1.334,187.318,27.993,356.619,24.115,181.183-4.151,210.049-38.767,362-31.422,107.554,5.2,125.77,24.122,252.481,32.426,109.058,7.148,203.846.227,265.869-6.531v94.339H0Z" transform="translate(0 -0.002)" fill="#fffcf6"/>
+        </g>
+      </g>
+      <g id="Vague-2" data-name="Vague" transform="translate(0 1024)">
+        <g id="Groupe_751-2" data-name="Groupe 751" clip-path="url(#clip-path-3)">
+          <path id="Tracé_27635-2" data-name="Tracé 27635" d="M2252.3,94.34c-36.7,11.826-93.908,26.616-169.773,31.651C1884.9,139.1,1803.039,69.934,1582.667,70.727c-167.272.6-172.927,40.646-370.861,42.2-169.795,1.334-183.508-27.993-349.365-24.115-177.5,4.151-205.776,38.767-354.634,31.422C402.44,115.036,384.6,96.113,260.461,87.809,153.621,80.661,60.762,87.582,0,94.34V0H2252.3Z" transform="translate(0 0)" fill="#fffcf6"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

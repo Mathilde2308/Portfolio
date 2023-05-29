@@ -1,5 +1,6 @@
 @charset "UTF-8";
-/* Mise en place des polices et des couleurs */
+/***** VARIABLES *****/
+/***** BASE *****/
 h1 {
   font-family: "Caveat";
   font-weight: 300;
@@ -38,10 +39,14 @@ span {
 
 a {
   text-decoration: none;
+  color: #333957;
+}
+ahover {
+  color: #E9AC41;
 }
 
 /*Paramètres temps animation*/
-/*Paramètres de toute la page*/
+/***** BODY *****/
 html {
   scroll-behavior: smooth;
 }
@@ -54,6 +59,12 @@ body {
   margin: 0;
 }
 
+.container_padding {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+/***** BOUTONS *****/
 .bouton {
   background: linear-gradient(90deg, rgb(255, 227, 175) 0%, rgb(251, 246, 238) 26%, rgb(255, 229, 226) 63%, rgb(238, 218, 242) 100%);
   padding: 15px;
@@ -62,12 +73,23 @@ body {
   text-decoration: none;
 }
 
-.container_padding {
-  padding-left: 10%;
-  padding-right: 10%;
+.bouton_suivant {
+  display: flex;
+}
+.bouton_suivant a {
+  background: #FCEED5;
+  border-radius: 80px;
+  color: #333957;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: auto;
+}
+.bouton_suivant a:hover {
+  background-color: #E9AC41;
+  cursor: pointer;
 }
 
-/*Paramètres header*/
+/***** HEADER *****/
 header {
   display: flex;
   justify-content: space-between;
@@ -109,6 +131,7 @@ header li {
   width: 90%;
 }
 
+/***** PAGE ACCUEIL *****/
 .mots_vertical {
   display: inline;
   text-indent: 8px;
@@ -164,33 +187,135 @@ header li {
     opacity: 0;
   }
 }
-#presentation {
+/*Section présentation */
+#container_presentation {
+  background-image: url("./img/Fond_bienvenue_web.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#container_presentation img {
+  width: 270px;
+}
+#container_presentation #presentation {
   display: flex;
   align-items: center;
   gap: 40px;
 }
-#presentation img {
-  width: 270px;
-}
 
-#cards {
+/* Section réalisations */
+.cards {
   display: flex;
   justify-content: space-between;
 }
-#cards .card {
+.cards .card {
+  width: calc(33% - 15px);
+  margin-bottom: 20px;
+  text-align: left;
   background-color: #F0EADF;
   border-radius: 30px;
-  border-bottom: solid 25px #9060A0;
 }
-#cards .titre {
-  text-align: center;
+.cards .card.card1 {
+  border-bottom: 25px solid #b595c0;
 }
-#cards .mockup {
-  position: relative;
-  top: 0;
-  left: 0;
+.cards .card.card2 {
+  border-bottom: 25px solid #DBE6E4;
+}
+.cards .card.card3 {
+  border-bottom: 25px solid #FFE3AF;
+}
+.cards .card .card-content {
+  margin: 40px;
+}
+.cards .card .card-content .mockup {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+.cards .card .card-content .titre {
+  font-weight: bold;
+}
+.cards .card .bouton_projet {
+  background: #FAF6EF;
+  padding: 10px 15px;
+  border-radius: 50px;
+  color: #333957;
+  text-decoration: none;
 }
 
 #bouton_projet {
   margin-top: 30px;
+  text-align: end;
+}
+#bouton_projet a {
+  color: #b595c0;
+  text-decoration: underline;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+#bouton_projet .arrows {
+  position: absolute;
+  margin-left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+#bouton_projet:hover .arrows {
+  opacity: 1;
+}
+
+/* CONTACT*/
+#contact {
+  display: flex;
+  justify-content: space-evenly;
+}
+#contact .icons {
+  width: 12%;
+  margin-right: 15px;
+}
+#contact .contacter {
+  display: flex;
+  align-items: center;
+}
+
+/***** PAGE RÉALISATIONS *****/
+.card.card4 {
+  border-bottom: 25px solid #b595c0;
+}
+.card.card5 {
+  border-bottom: 25px solid #DBE6E4;
+}
+.card.card6 {
+  border-bottom: 25px solid #FFE3AF;
+}
+
+/***** PROJETS PROCREATE *****/
+#procreate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+}
+
+/***** FOOTER *****/
+footer {
+  position: relative;
+  background-image: url(./img/footer_background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 280px;
+}
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 165px;
+}
+
+#logo_footer {
+  width: 20%;
 }/*# sourceMappingURL=style.css.map */

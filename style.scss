@@ -1,9 +1,9 @@
-/* Mise en place des polices et des couleurs */
-
+/***** VARIABLES *****/
 $background-color: #FFFCF6;
 $text-couleur : #333957;
 $text-secondaire : #E9AC41;
 $text-tertiaire : #9060A0;
+$variant-tertiaire: #b595c0;
 $background-variant : #F0EADF;
 
 @mixin font_principale {
@@ -29,6 +29,8 @@ $background-variant : #F0EADF;
     color: #333957;
     text-align: center;
 }
+
+/***** BASE *****/
 
 h1 {
     @include titre_principal;
@@ -58,6 +60,11 @@ span {
 
 a {
     text-decoration: none;
+    color: $text-couleur;
+
+    &hover {
+        color: $text-secondaire
+    }
 }
 
 /*Paramètres temps animation*/
@@ -65,7 +72,7 @@ a {
 $tempsanimation : 9s;
 $tempspar4: $tempsanimation/4;
 
-/*Paramètres de toute la page*/
+/***** BODY *****/
 
 html {
     scroll-behavior: smooth;
@@ -76,8 +83,14 @@ body {
     color: $text-couleur;
     @include font_principale();
     margin: 0;
-
 }
+
+.container_padding {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/***** BOUTONS *****/
 
 .bouton {
     background: linear-gradient(90deg, rgba(255, 227, 175, 1) 0%, rgba(251, 246, 238, 1) 26%, rgba(255, 229, 226, 1) 63%, rgba(238, 218, 242, 1) 100%);
@@ -87,12 +100,26 @@ body {
     text-decoration: none;
 }
 
-.container_padding {
-    padding-left: 10%;
-    padding-right: 10%;
+.bouton_suivant {
+    display: flex;
+
+    a {
+        background: #FCEED5;
+        border-radius: 80px;
+        color: $text-couleur;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: auto;
+
+        &:hover {
+            background-color: $text-secondaire;
+            cursor: pointer;
+        }
+    }
 }
 
-/*Paramètres header*/
+
+/***** HEADER *****/
 
 header {
     display: flex;
@@ -138,6 +165,8 @@ header {
         }
     }
 }
+
+/***** PAGE ACCUEIL *****/
 
 .mots_vertical {
     display: inline;
@@ -205,37 +234,163 @@ header {
     }
 }
 
-#presentation {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+/*Section présentation */
+
+#container_presentation {
+    background-image: url('./img/Fond_bienvenue_web.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
 
     img {
         width: 270px;
     }
+
+    #presentation {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
 }
 
-#cards {
+/* Section réalisations */
+
+.cards {
     display: flex;
     justify-content: space-between;
 
     .card {
-        background-color: $background-variant ;
+        width: calc(33% - 15px);
+        margin-bottom: 20px;
+        text-align: left;
+        background-color: $background-variant;
         border-radius: 30px;
-        border-bottom: solid 25px #9060A0;
-    }
 
-    .titre {
-        text-align: center;
-    }
+        &.card1 {
+            border-bottom: 25px solid $variant-tertiaire;
+        }
 
-    .mockup {
-        position: relative;
-        top: 0;
-        left: 0;
+        &.card2 {
+            border-bottom: 25px solid #DBE6E4;
+        }
+
+        &.card3 {
+            border-bottom: 25px solid #FFE3AF;
+        }
+
+        .card-content {
+            margin: 40px;
+
+            .mockup {
+                width: 80%;
+                display: block;
+                margin: 0 auto;
+            }
+
+            .titre {
+                font-weight: bold;
+            }
+        }
+
+        .bouton_projet {
+            background: #FAF6EF;
+            padding: 10px 15px;
+            border-radius: 50px;
+            color: $text-couleur;
+            text-decoration: none;
+        }
     }
 }
 
 #bouton_projet {
     margin-top: 30px;
+    text-align: end;
+
+    a {
+        color: $variant-tertiaire;
+        text-decoration: underline;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+    }
+
+    .arrows {
+        position: absolute;
+        margin-left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 1;
+    }
+
+    &:hover {
+        .arrows {
+            opacity: 1;
+        }
+    }
+}
+
+/* CONTACT*/
+
+#contact {
+    display: flex;
+    justify-content: space-evenly;
+
+    .icons {
+        width: 12%;
+        margin-right: 15px;
+    }
+
+    .contacter {
+        display: flex;
+        align-items: center;
+    }
+}
+
+/***** PAGE RÉALISATIONS *****/
+
+.card {
+
+    &.card4 {
+        border-bottom: 25px solid $variant-tertiaire;
+    }
+
+    &.card5 {
+        border-bottom: 25px solid #DBE6E4;
+    }
+
+    &.card6 {
+        border-bottom: 25px solid #FFE3AF;
+    }
+}
+
+/***** PROJETS PROCREATE *****/
+
+#procreate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+}
+
+/***** FOOTER *****/
+
+footer {
+    position: relative;
+    background-image: url(./img/footer_background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 280px;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 165px;
+}
+
+#logo_footer {
+    width: 20%;
 }
