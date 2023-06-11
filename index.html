@@ -43,7 +43,7 @@
                 </h2>
                 <h2>la curiosité est mon plus beau défaut</h2>
                 <h3>Pour un design joyeux & coloré au service de l’utilisateur</h3>
-                <a class="bouton" href="#bienvenue">Partons à l'aventure</a>
+                <a class="button_main" href="#bienvenue">Partons à l'aventure</a>
             </div>
         </div>
     </section>
@@ -74,60 +74,69 @@
                 </div>
 
                 <div>
-                    <a class="bouton" href="img/CV_Mathilde_Lalart.pdf">Mon CV</a>
+                    <a class="button_main" href="img/CV_Mathilde_Lalart.pdf">Mon CV</a>
                 </div>
             </div>
         </section>
 
-        <section id="realisations" class="container_padding">
-            <div>
-                <h1>Mes réalisations</h1>
-                <div class="cards">
-                    <div class="card card1">
-                        <div class="card-content">
-                            <img class="mockup" src="img/Yoga_app.png" alt="">
+        <section id="citation" class="container_padding">
+            <img src="img/Citation.svg" alt="">
+        </section>
+
+        <section class="container_padding">
+            <h1 id="realisations">Mes réalisations</h1>
+            <div class="cards">
+                <div class="card card1">
+                    <img class="mockup" src="./img/Center_parcs/mockup.png" alt="">
+                    <div class="card-content">
+                        <div>
                             <p class="titre">UI design ~ mobile</p>
                             <p>Refonte de l'application Center Parcs</p>
-                            <a class="bouton_projet">Découvrir ce projet</a>
                         </div>
+                        <a class="button_discover" href="Center_parcs.html">Découvrir ce projet</a>
                     </div>
+                </div>
 
-                    <div class="card card2">
-                        <div class="card-content">
-                            <img class="mockup" src="img/Yoga_app.png" alt="">
-                            <p class="titre">Maquette</p>
-                            <p>Landing page Zoïd City</p>
-                            <a class="bouton_projet">Découvrir ce projet</a>
+                <div class="card card2">
+                    <img class="mockup" src="./img/zoidcity/mockup.png" alt="">
+                    <div class="card-content">
+                        <div>
+                            <p class="titre">Intégration web</p>
+                            <p>Création et intégration de la landing page de Zoïd City</p>
                         </div>
+                        <a class="button_discover" href="zoid_city.html">Découvrir ce projet</a>
                     </div>
+                </div>
 
-                    <div class="card card3">
-                        <div class="card-content">
-                            <img class="mockup" src="img/Yoga_app.png" alt="">
+                <div class="card card3">
+                    <img class="mockup" src="./img/Monaa/mockup.png" alt="">
+                    <div class="card-content">
+                        <div>
                             <p class="titre">UI design</p>
-                            <p>Refonte de l'application Center Parcs</p>
-                            <a class="bouton_projet">Découvrir ce projet</a>
+                            <p>Maquettage de l'application web de Monaa</p>
                         </div>
+                        <a class="button_discover" href="monaa.html">Découvrir ce projet</a>
                     </div>
                 </div>
+            </div>
 
-                <div id="bouton_projet">
-                    <a href="mesréalisations.html" target="_blank">Voir tous mes projets <img class="arrows"
-                            src="img/x2_arrows.svg" alt="arrows"></a>
-                </div>
+            <div id="button_allprojects">
+                <a href="mesréalisations.html" target="_blank">Voir tous mes projets <img class="arrows"
+                        src="img/icons/Chevrons.svg" alt="arrows"></a>
             </div>
         </section>
 
         <section class="container_padding">
             <h1>Contact</h1>
             <div id="contact">
-                <div class="contacter">
-                    <a href="mailto:mathilde.lalart1@gmail.com"><img class="icons" src="img/mail_icon.svg"
-                            alt="icone mail"> mathilde.lalart1@gmail.com</a>
+                <div>
+                    <a class="contacter" href="mailto:mathilde.lalart1@gmail.com">
+                        <img class="icons" src="img/icons/mail_icon.svg" alt="icone mail">
+                        mathilde.lalart1@gmail.com</a>
                 </div>
-                <div class="contacter">
-                    <a href="https://www.linkedin.com/in/mathilde-lalart"> <img class="icons"
-                            src="img/linkedin_icon.svg" alt="icone linkedin">Retrouvez-moi sur Linkedin</a>
+                <div>
+                    <a class="contacter" href="https://www.linkedin.com/in/mathilde-lalart"> <img class="icons"
+                            src="img/icons/linkedin_icon.svg" alt="icone linkedin">Retrouvez-moi sur Linkedin</a>
                 </div>
             </div>
         </section>
@@ -136,8 +145,7 @@
     <footer class="container_padding">
         <div id="footer">
             <img id="logo_footer" src="img/Logo.svg" alt="Logo">
-            <p>&copy; Réalisé avec <span>♥</span> par Mathilde Lalart</p>
-            <a href="">Mentions légales</a>
+            <p>&copy; Réalisé avec <span>♥</span> par Mathilde Lalart ~ Tous droits réservés</p>
         </div>
     </footer>
 

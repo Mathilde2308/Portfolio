@@ -10,7 +10,7 @@ h1 {
 }
 
 p {
-  font-family: "CoconPro";
+  font-family: "ff-cocon-pro";
   font-weight: 300;
   font-size: 17px;
   line-height: 30px;
@@ -18,14 +18,14 @@ p {
 
 h2 {
   color: #333957;
-  font-family: "CoconPro";
+  font-family: "ff-cocon-pro";
   font-weight: 300;
   font-size: 26px;
 }
 
 h3 {
   color: #9060A0;
-  font-family: "CoconPro";
+  font-family: "ff-cocon-pro";
   font-weight: 300;
   line-height: 30px;
   margin-bottom: 40px;
@@ -54,7 +54,7 @@ html {
 body {
   background-color: #FFFCF6;
   color: #333957;
-  font-family: "CoconPro";
+  font-family: "ff-cocon-pro";
   font-weight: 300;
   margin: 0;
 }
@@ -65,7 +65,7 @@ body {
 }
 
 /***** BOUTONS *****/
-.bouton {
+.button_main {
   background: linear-gradient(90deg, rgb(255, 227, 175) 0%, rgb(251, 246, 238) 26%, rgb(255, 229, 226) 63%, rgb(238, 218, 242) 100%);
   padding: 15px;
   border-radius: 80px;
@@ -73,20 +73,59 @@ body {
   text-decoration: none;
 }
 
-.bouton_suivant {
-  display: flex;
-}
-.bouton_suivant a {
-  background: #FCEED5;
+.button_discover {
+  background: #FFFCF6;
   border-radius: 80px;
   color: #333957;
   text-decoration: none;
-  padding: 10px 20px;
-  margin: auto;
+  padding: 0.7rem 1rem;
 }
-.bouton_suivant a:hover {
-  background-color: #E9AC41;
-  cursor: pointer;
+.button_discover:hover {
+  background-color: #9DB1AA;
+  color: #FAF6EF;
+  transition: background-color 0.4s;
+}
+
+.button_secondary {
+  background-color: #FAF6EF;
+  border-radius: 80px;
+  padding: 0px 30px;
+  color: #333957;
+  text-decoration: none;
+}
+.button_secondary #eye {
+  vertical-align: middle;
+}
+.button_secondary:hover {
+  background-color: #9DB1AA;
+  color: #FAF6EF;
+  transition: background-color 0.4s;
+}
+
+#button_allprojects {
+  margin-top: 30px;
+  text-align: end;
+}
+#button_allprojects a {
+  color: #b595c0;
+  text-decoration: underline;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+#button_allprojects .arrows {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+#button_allprojects:hover a {
+  color: #333957;
+}
+#button_allprojects:hover a .arrows {
+  opacity: 1;
 }
 
 /***** HEADER *****/
@@ -107,13 +146,13 @@ header #menu {
 }
 header li {
   margin: 40px;
-  font-family: "CoconPro";
+  font-family: "ff-cocon-pro";
   font-weight: 300;
   font-size: 20px;
 }
 
 #header_intro {
-  background-image: url(img/Fond_bulles.svg);
+  background-image: url(./img/Fond_bulles.svg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -202,68 +241,65 @@ header li {
   gap: 40px;
 }
 
+/*Section citation*/
+#citation {
+  width: 40%;
+  margin: auto;
+  margin-top: -4rem;
+}
+#citation img {
+  width: 70%;
+}
+
 /* Section réalisations */
+.background {
+  background-image: url(./img/background.png);
+  background-repeat: no-repeat;
+}
+
 .cards {
   display: flex;
-  justify-content: space-between;
+  gap: 1.5rem;
 }
 .cards .card {
   width: calc(33% - 15px);
-  margin-bottom: 20px;
-  text-align: left;
   background-color: #F0EADF;
-  border-radius: 30px;
+  border-radius: 1rem;
+  border-bottom: 25px solid #FFE3AF;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin-bottom: 2rem;
 }
-.cards .card.card1 {
-  border-bottom: 25px solid #b595c0;
+.cards .card .mockup {
+  width: 60%;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 0;
 }
 .cards .card.card2 {
-  border-bottom: 25px solid #DBE6E4;
+  border-color: #DBE6E4;
 }
 .cards .card.card3 {
-  border-bottom: 25px solid #FFE3AF;
+  border-color: #FFE3AF;
 }
 .cards .card .card-content {
-  margin: 40px;
+  margin: 1.6rem;
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-.cards .card .card-content .mockup {
-  width: 80%;
-  display: block;
-  margin: 0 auto;
+.cards .card .card-content .titre_icon {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
 }
 .cards .card .card-content .titre {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   font-weight: bold;
-}
-.cards .card .bouton_projet {
-  background: #FAF6EF;
-  padding: 10px 15px;
-  border-radius: 50px;
-  color: #333957;
-  text-decoration: none;
-}
-
-#bouton_projet {
-  margin-top: 30px;
-  text-align: end;
-}
-#bouton_projet a {
-  color: #b595c0;
-  text-decoration: underline;
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-}
-#bouton_projet .arrows {
-  position: absolute;
-  margin-left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 1;
-}
-#bouton_projet:hover .arrows {
-  opacity: 1;
 }
 
 /* CONTACT*/
@@ -282,13 +318,68 @@ header li {
 
 /***** PAGE RÉALISATIONS *****/
 .card.card4 {
-  border-bottom: 25px solid #b595c0;
+  border-bottom: 25px solid #EEDAF2;
 }
 .card.card5 {
-  border-bottom: 25px solid #DBE6E4;
+  border-bottom: 25px solid #FFE3AF;
 }
 .card.card6 {
-  border-bottom: 25px solid #FFE3AF;
+  border-bottom: 25px solid #DBE6E4;
+}
+
+/***** PAGE PROJET (valable pour les 6 projets développés) *****/
+.frontSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 4rem;
+  margin-bottom: 3rem;
+}
+.frontSection .column {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.frontSection .imgBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+#img_container {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+#img_container img {
+  width: 50%;
+}
+
+.section_row {
+  display: flex;
+  flex-direction: row;
+}
+.section_row .section_column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section_row .section_column #vide {
+  width: 200px;
+  height: 100px;
+}
+.section_row .section_column .card_projet {
+  width: 80%;
+  background-color: #FAF6EF;
+  border-radius: 15px;
+  padding: 2rem;
+}
+.section_row .section_column .card_projet .titre_projet {
+  font-family: "Caveat";
+  font-weight: 300;
+  color: #9060A0;
 }
 
 /***** PROJETS PROCREATE *****/
@@ -317,5 +408,5 @@ footer {
 }
 
 #logo_footer {
-  width: 20%;
+  width: 15%;
 }/*# sourceMappingURL=style.css.map */
