@@ -43,7 +43,7 @@ p {
 h2 {
     color: $text-couleur;
     @include font_principale;
-    font-size: 26px;
+    font-size: 30px;
 }
 
 h3 {
@@ -67,7 +67,7 @@ a {
     }
 }
 
-/*Paramètres temps animation*/
+/*Paramètres temps animation des images */
 
 $tempsanimation : 9s;
 $tempspar4: $tempsanimation/4;
@@ -92,6 +92,7 @@ body {
 
 /***** BOUTONS *****/
 
+/***** bouton principal (Partons à l'aventure, Mon CV) *****/
 .button_main {
     background: linear-gradient(90deg, rgba(255, 227, 175, 1) 0%, rgba(251, 246, 238, 1) 26%, rgba(255, 229, 226, 1) 63%, rgba(238, 218, 242, 1) 100%);
     padding: 15px;
@@ -100,6 +101,7 @@ body {
     text-decoration: none;
 }
 
+/***** bouton secondaire: découvrir ce projet (présent sur chaque card - home et page réalisations) *****/
 .button_discover {
     background: $background-color;
     border-radius: 80px;
@@ -114,7 +116,8 @@ body {
     }
 }
 
-.button_secondary {
+/***** bouton tertiaire : voir le prototype *****/
+.button_tertiary {
     background-color: #FAF6EF;
     border-radius: 80px;
     padding: 0px 30px;
@@ -132,7 +135,10 @@ body {
     }
 }
 
-#button_allprojects {
+
+/***** bouton spécial : tous les projets *****/
+
+.button_allprojects {
     margin-top: 30px;
     text-align: end;
 
@@ -151,6 +157,7 @@ body {
         opacity: 0;
         transition: opacity 0.3s ease;
         z-index: 1;
+        width: 15%;
     }
 
     &:hover {
@@ -164,7 +171,7 @@ body {
     }
 }
 
-/***** HEADER *****/
+/***** HEADER : valable pour toutes les pages du portfolio *****/
 
 header {
     display: flex;
@@ -279,7 +286,7 @@ header {
     }
 }
 
-/*Section présentation */
+/* Section présentation : fond vague, photo de profil, bouton vers CV, texte à propos */
 
 #container_presentation {
     background-image: url('./img/Fond_bienvenue_web.svg');
@@ -305,11 +312,11 @@ header {
     margin-top: -4rem;
 
     img {
-        width: 70%;
+        width: 100%;
     }
 }
 
-/* Section réalisations */
+/* Section réalisations : les 3 cards avec les projets principaux */
 
 .background {
     background-image: url(./img/background.png);
@@ -402,15 +409,15 @@ header {
     }
 }
 
-/***** PAGE PROJET (valable pour les 6 projets développés) *****/
+/***** PAGE PROJET (valable pour les 6 pages projet) *****/
 
 .frontSection {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     gap: 4rem;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 
     .column {
         width: 50%;
@@ -429,32 +436,27 @@ header {
 
 #img_container {
     text-align: center;
-    margin-bottom: 3rem;
 
     img {
-        width: 50%;
+        width: 80%;
     }
 }
 
 .section_row {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    gap: 3rem;
 
     .section_column {
         display: flex;
         flex-direction: column;
         align-items: center;
 
-        #vide {
-            width: 200px;
-            height: 100px;
-        }
-
         .card_projet {
-            width: 80%;
             background-color: #FAF6EF;
             border-radius: 15px;
-            padding: 2rem;
+            padding: 1rem 2rem;
 
             .titre_projet {
                 @include font_secondaire();

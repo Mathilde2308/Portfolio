@@ -20,7 +20,7 @@ h2 {
   color: #333957;
   font-family: "ff-cocon-pro";
   font-weight: 300;
-  font-size: 26px;
+  font-size: 30px;
 }
 
 h3 {
@@ -45,7 +45,7 @@ ahover {
   color: #E9AC41;
 }
 
-/*Paramètres temps animation*/
+/*Paramètres temps animation des images */
 /***** BODY *****/
 html {
   scroll-behavior: smooth;
@@ -65,6 +65,7 @@ body {
 }
 
 /***** BOUTONS *****/
+/***** bouton principal (Partons à l'aventure, Mon CV) *****/
 .button_main {
   background: linear-gradient(90deg, rgb(255, 227, 175) 0%, rgb(251, 246, 238) 26%, rgb(255, 229, 226) 63%, rgb(238, 218, 242) 100%);
   padding: 15px;
@@ -73,6 +74,7 @@ body {
   text-decoration: none;
 }
 
+/***** bouton secondaire: découvrir ce projet (présent sur chaque card - home et page réalisations) *****/
 .button_discover {
   background: #FFFCF6;
   border-radius: 80px;
@@ -86,49 +88,52 @@ body {
   transition: background-color 0.4s;
 }
 
-.button_secondary {
+/***** bouton tertiaire : voir le prototype *****/
+.button_tertiary {
   background-color: #FAF6EF;
   border-radius: 80px;
   padding: 0px 30px;
   color: #333957;
   text-decoration: none;
 }
-.button_secondary #eye {
+.button_tertiary #eye {
   vertical-align: middle;
 }
-.button_secondary:hover {
+.button_tertiary:hover {
   background-color: #9DB1AA;
   color: #FAF6EF;
   transition: background-color 0.4s;
 }
 
-#button_allprojects {
+/***** bouton spécial : tous les projets *****/
+.button_allprojects {
   margin-top: 30px;
   text-align: end;
 }
-#button_allprojects a {
+.button_allprojects a {
   color: #b595c0;
   text-decoration: underline;
   display: inline-block;
   vertical-align: middle;
   position: relative;
 }
-#button_allprojects .arrows {
+.button_allprojects .arrows {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 1;
+  width: 15%;
 }
-#button_allprojects:hover a {
+.button_allprojects:hover a {
   color: #333957;
 }
-#button_allprojects:hover a .arrows {
+.button_allprojects:hover a .arrows {
   opacity: 1;
 }
 
-/***** HEADER *****/
+/***** HEADER : valable pour toutes les pages du portfolio *****/
 header {
   display: flex;
   justify-content: space-between;
@@ -226,7 +231,7 @@ header li {
     opacity: 0;
   }
 }
-/*Section présentation */
+/* Section présentation : fond vague, photo de profil, bouton vers CV, texte à propos */
 #container_presentation {
   background-image: url("./img/Fond_bienvenue_web.svg");
   background-size: contain;
@@ -248,10 +253,10 @@ header li {
   margin-top: -4rem;
 }
 #citation img {
-  width: 70%;
+  width: 100%;
 }
 
-/* Section réalisations */
+/* Section réalisations : les 3 cards avec les projets principaux */
 .background {
   background-image: url(./img/background.png);
   background-repeat: no-repeat;
@@ -327,14 +332,14 @@ header li {
   border-bottom: 25px solid #DBE6E4;
 }
 
-/***** PAGE PROJET (valable pour les 6 projets développés) *****/
+/***** PAGE PROJET (valable pour les 6 pages projet) *****/
 .frontSection {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   gap: 4rem;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 .frontSection .column {
   width: 50%;
@@ -351,30 +356,26 @@ header li {
 
 #img_container {
   text-align: center;
-  margin-bottom: 3rem;
 }
 #img_container img {
-  width: 50%;
+  width: 80%;
 }
 
 .section_row {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  gap: 3rem;
 }
 .section_row .section_column {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.section_row .section_column #vide {
-  width: 200px;
-  height: 100px;
-}
 .section_row .section_column .card_projet {
-  width: 80%;
   background-color: #FAF6EF;
   border-radius: 15px;
-  padding: 2rem;
+  padding: 1rem 2rem;
 }
 .section_row .section_column .card_projet .titre_projet {
   font-family: "Caveat";
