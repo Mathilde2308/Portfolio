@@ -182,23 +182,29 @@ body {
 /***** HEADER : valable pour toutes les pages du portfolio *****/
 
 header {
+    nav {
+        width: 100%;
+    }
     #nav {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         @include font_principale();
-        font-size: calc(0.4rem + 1.1vw);
+        font-size: calc(0.4rem + 1vw);
         margin-top: 3rem;
 
         img {
-            width: 20%;
+            width: 60%;
         }
 
         #menu {
             display: flex;
             justify-content: space-around;
             list-style: none;
-            width: 70%;
+            padding: 0;    
+            flex-direction: row;   
+            width: 100%;
+
         }
 
         @media (max-width:650px) {
@@ -234,7 +240,7 @@ header {
 }
 
 #header_intro {
-    background-image: url(./img/Fond_bulles.svg);
+    background-image: url(ressources/Commun/Fond_bulles.svg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -325,7 +331,7 @@ header {
 /* Section présentation : fond vague, photo de profil, bouton vers CV, texte à propos */
 
 #container_presentation {
-    background-image: url('./img/Fond_bienvenue_web.svg');
+    background-image: url('ressources/Commun/Fond_bienvenue_web.svg');
     background-size: contain;
     background-repeat: no-repeat;
 
@@ -355,7 +361,7 @@ header {
 /* Section réalisations : les 3 cards avec les projets principaux */
 
 .background {
-    background-image: url(./img/background.png);
+    background-image: url(ressources/Commun/Untitled_Artwork.psd);
     background-repeat: no-repeat;
 }
 
@@ -536,7 +542,7 @@ header {
 /***** FOOTER *****/
 
 footer {
-    background-image: url(./img/footer_background.svg);
+    background-image: url(ressources/Commun/footer_background.svg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 280px;

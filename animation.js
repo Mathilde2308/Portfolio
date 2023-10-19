@@ -4,7 +4,7 @@ function randomIntFromInterval(min, max) { // min and max included
 
 //IMAGES ALEATOIRES//
 
-const images = ["img/img_lavandes.svg", "img/img_flowers.png", "img/img_nuages.svg", "img/img_mer.svg"]
+const images = ["ressources/Commun/img_flowers.png", "ressources/Commun/img_lavandes.svg", "ressources/Commun/img_mer.svg", "ressources/Commun/img_nuages.svg"]
 
 const index = randomIntFromInterval(0, 3);
 

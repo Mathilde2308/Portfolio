@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="img/icons/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="ressources/icones/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="ressources/icones/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>Mathilde Lalart | UX/UI designer | Projet Center Parcs</title>
 </head>
@@ -17,16 +17,21 @@
 <body>
     <section class="container_padding">
         <header>
-            <div>
-                <a href="index.html">
-                    <img src="img/Logo.svg" alt="Logo">
-                </a>
-            </div>
-            <nav>
+            <nav id="nav" class="active">
+                
+                    <a href="index.html">
+                        <img src="ressources/Commun/Logo.svg" alt="Logo">
+                    </a>
+
                 <ul id="menu">
-                    <li><a href="mesrealisations.html">Mes réalisations</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
+                    <li>
+                        <a href="mesrealisations.html">Mes réalisations</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
                 </ul>
+                <div id="icons">&#9776;</div>
             </nav>
         </header>
     </section>
@@ -46,10 +51,10 @@
                 </div>
             </div>
             <div class="imgBox">
-                <img src="./img/Center_parcs/mockup_02.svg">
+                <img src="ressources/Center Parcs/mockup_02.svg">
                 <a class="button_tertiary"
                     href="https://xd.adobe.com/view/5455c2bf-9ebe-425c-8294-6473c8dc469f-0106/?fullscreen"
-                    target="_blank">Voir le prototype <img id="eye" src="img/icons/eye_icon.svg" alt="arrows"></a>
+                    target="_blank">Voir le prototype <img id="eye" src="ressources/icones/eye_icon.svg" alt="arrows"></a>
             </div>
         </div>
     </section>
@@ -91,14 +96,14 @@
     <section>
         <div class="button_allprojects container_padding">
             <a href="mesrealisations.html" target="_blank">Découvrir les autres projets <img class="arrows"
-                    src="img/icons/Chevrons.svg" alt="arrows"></a>
+                    src="ressources/icones/Chevrons.svg" alt="arrows"></a>
         </div>
     </section>
 
     <footer class="container_padding">
         <div id="footer">
             <img id="logo_footer" src="ressources/Commun/Logo.svg" alt="Logo">
-            <p>&copy; Réalisé avec <span>♥</span> par Mathilde Lalart ~ Tous droits réservés</p>
+            <p>&copy; Réalisé avec <span>♥</span> par Mathilde Lalart <br>~ Tous droits réservés</p>
             <a href="">Mentions légales</a>
         </div>
     </footer>
