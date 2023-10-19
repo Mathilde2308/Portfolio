@@ -148,11 +148,11 @@ header #nav {
   align-items: center;
   font-family: "ff-cocon-pro";
   font-weight: 300;
-  font-size: calc(0.4rem + 1.3vw);
+  font-size: calc(0.4rem + 1.1vw);
   margin-top: 3rem;
 }
 header #nav img {
-  width: 30%;
+  width: 20%;
 }
 header #nav #menu {
   display: flex;

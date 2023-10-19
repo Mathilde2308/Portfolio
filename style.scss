@@ -187,11 +187,11 @@ header {
         justify-content: space-between;
         align-items: center;
         @include font_principale();
-        font-size: calc(0.4rem + 1.3vw);
+        font-size: calc(0.4rem + 1.1vw);
         margin-top: 3rem;
 
         img {
-            width: 30%;
+            width: 20%;
         }
 
         #menu {
