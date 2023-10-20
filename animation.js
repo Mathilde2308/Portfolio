@@ -15,7 +15,7 @@ console.log(images[index]);
 
 //BURGER MENU//
 
-icons.AddEventListener("click", () => {
+/*icons.addEventListener("click", () => {
     nav.ClassList.toggle("active")
 });
 
@@ -23,4 +23,4 @@ links.forEach((link) => {
     link.addEventListener("click", () => {
         nav.classList.remove("active");
     });
-});
+}); */
